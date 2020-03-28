@@ -1,0 +1,13 @@
+{
+    "tables": {
+        "Categories": {
+            "tableName": "Categories",
+            "indexes": []
+        },
+        "Products": {
+            "tableName": "Products",
+            "indexes": []
+        }
+    },
+    "revision": 1
+}
