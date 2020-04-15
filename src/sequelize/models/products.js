@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         type: DataTypes.TEXT
       },
+      subtitle: {
+        allowNull: true,
+        type: DataTypes.STRING
+      },
       productCategory: {
         allowNull: true,
         type: DataTypes.INTEGER
