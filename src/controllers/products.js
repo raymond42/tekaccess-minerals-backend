@@ -5,8 +5,9 @@ config();
 
 class ProductsController {
   static async getAllProducts(req, res) {
+    const category=req.params.productCategory;
     try {
-      const products = await Product.findAll();
+      const products = await Product.findAll({where: { productCategory: category}});
       res.status(200).json({
         message: `${products.length} product(s) found`,
         data: products
