@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Product = sequelize.define(
-    "Product",
+  const Scrap = sequelize.define(
+    "Scrap",
     {
       id: {
         allowNull: false,
@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         type: DataTypes.INTEGER
       },
-      productName: {
+      name: {
         allowNull: false,
         type: DataTypes.STRING
       },
@@ -19,14 +19,6 @@ module.exports = (sequelize, DataTypes) => {
       description2: {
         allowNull: true,
         type: DataTypes.TEXT
-      },
-      subtitle: {
-        allowNull: true,
-        type: DataTypes.STRING
-      },
-      productCategory: {
-        allowNull: true,
-        type: DataTypes.INTEGER
       },
       image: {
         allowNull: true,
@@ -49,11 +41,5 @@ module.exports = (sequelize, DataTypes) => {
       timeStamps: true
     }
   );
-  Product.associate = models => {
-    Product.belongsTo(models.Category, {
-      foreignKey: "productCategory",
-      onDelete: "CASCADE"
-    });
-  };
-  return Product;
+  return Scrap;
 };
